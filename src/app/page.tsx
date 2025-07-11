@@ -3,7 +3,6 @@ import ControlSection from "@/components/ControlSections";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import ModelListSection from "@/components/ModelListSection";
-import Navbar from "@/components/Navbar";
 import OfferSection from "@/components/OfferSection";
 import OneInfoSection from "@/components/OneInfoSection"
 import ResearchSection from "@/components/ResearchSection";

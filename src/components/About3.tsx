@@ -8,7 +8,7 @@ const AboutFutureSection = () => {
                 <div className="mb-12">
                     <span className="block text-6xl text-white font-medium mb-2">03</span>
                     <h2 className="text-3xl md:text-4xl font-semibold text-white border-b-2 border-gray-400 inline-block pb-1">
-                        🌍 Where We're Headed
+                        Where We're Headed
                     </h2>
                 </div>
 
