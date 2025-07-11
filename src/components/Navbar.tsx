@@ -1,59 +1,79 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+
+const navItems = [
+    { key: 'nav_home', href: '/' },
+    { key: 'nav_about', href: '/about' },
+    { key: 'nav_models', href: '/models' },
+    { key: 'nav_services', href: '/services' },
+    { key: 'nav_research', href: '/research-and-technology' },
+    { key: 'nav_roadmap', href: '/roadmap' },
+    { key: 'nav_blog', href: '/blog' },
+]
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const { t, i18n } = useTranslation()
 
-    const toggleMenu = () => setIsOpen(!isOpen)
+    const changeLanguage = (lng: 'tr' | 'en') => {
+        i18n.changeLanguage(lng)
+    }
 
     return (
-        <nav className="w-full fixed top-0 z-50 bg-white shadow">
-            <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 w-[95%] z-50 bg-white rounded-xl shadow-md">
+            <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="text-2xl font-bold text-gray-900">
-                    Lumees
-                </Link>
-
-                {/* Desktop Menu */}
-                <div className="hidden md:flex gap-6 items-center">
-                    <Link href="/product" className="text-gray-700 hover:text-black">Product</Link>
-                    <Link href="/pricing" className="text-gray-700 hover:text-black">Pricing</Link>
-                    <Link href="/blog" className="text-gray-700 hover:text-black">Blog</Link>
-                    <Link href="/login" className="text-gray-700 hover:text-black">Login</Link>
-                    <Link href="/get-started">
-                        <button className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">
-                            Get Started
-                        </button>
-                    </Link>
+                <div className="flex items-center space-x-2">
+                    <Image src="/logo lumess.avif" alt="Logo" width={30} height={30} />
+                    <span className="text-lg font-semibold text-gray-900">Lumees</span>
                 </div>
 
-                {/* Mobile Toggle */}
-                <div className="md:hidden">
-                    <button onClick={toggleMenu}>
-                        {isOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
-                </div>
-            </div>
-
-            {/* Mobile Menu */}
-            {isOpen && (
-                <div className="md:hidden bg-white px-6 py-4 shadow">
-                    <div className="flex flex-col gap-4">
-                        <Link href="/product" onClick={toggleMenu}>Product</Link>
-                        <Link href="/pricing" onClick={toggleMenu}>Pricing</Link>
-                        <Link href="/blog" onClick={toggleMenu}>Blog</Link>
-                        <Link href="/login" onClick={toggleMenu}>Login</Link>
-                        <Link href="/get-started" onClick={toggleMenu}>
-                            <button className="w-full bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">
-                                Get Started
-                            </button>
+                {/* Menu Items */}
+                <div className="flex space-x-4">
+                    {navItems.map(({ key, href }) => (
+                        <Link
+                            key={key}
+                            href={href}
+                            className="px-4 py-2 rounded-md text-sm font-medium text-gray-800 hover:text-orange-500"
+                        >
+                            {t(key)}
                         </Link>
+                    ))}
+                </div>
+
+                {/* CTA + Language Switch */}
+                <div className="flex items-center gap-4">
+                    <Link
+                        href="/#contact"
+                        className="bg-black text-white text-sm font-semibold px-4 py-2 rounded-md hover:bg-gray-800"
+                    >
+                        {t('talk_to_sales')}
+                    </Link>
+
+                    <div className="flex space-x-1">
+                        <button
+                            onClick={() => changeLanguage('tr')}
+                            className={`px-3 py-1 rounded text-sm font-medium ${i18n.language === 'tr'
+                                ? 'bg-orange-500 text-white'
+                                : 'bg-gray-100 text-gray-800'
+                                }`}
+                        >
+                            TR
+                        </button>
+                        <button
+                            onClick={() => changeLanguage('en')}
+                            className={`px-3 py-1 rounded text-sm font-medium ${i18n.language === 'en'
+                                ? 'bg-orange-500 text-white'
+                                : 'bg-gray-100 text-gray-800'
+                                }`}
+                        >
+                            EN
+                        </button>
                     </div>
                 </div>
-            )}
+            </div>
         </nav>
     )
 }
