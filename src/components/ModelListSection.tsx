@@ -30,24 +30,26 @@ const ModelListSection = () => {
                 </div>
 
                 {/* Model List */}
-                <div className="space-y-4">
+                <div className="space-y-6">
                     {models.map((model) => (
                         <div
                             key={model.number}
-                            className="flex items-center justify-between bg-stone-900 px-6 py-4 rounded-lg shadow-sm hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                            className="flex items-center justify-between bg-stone-800 px-6 py-4 rounded-lg shadow-md transition-transform transform hover:scale-125 hover:shadow-2xl duration-300 ease-in-out"
                         >
                             <div className="flex items-center gap-6">
-                                <span className="inline-block bg-[#f67d45] text-white text-xs font-semibold px-3 py-1 rounded-full mb-2">
+                                <span className="inline-block bg-[#f67d45] text-white text-xs font-semibold px-3 py-1 rounded-full">
                                     {model.number}
                                 </span>
                                 <h3 className="text-lg font-medium text-white">{model.title}</h3>
                             </div>
-                            <ArrowRight className="text-gray-400 hover:text-gray-600 transition" size={20} />
+                            <ArrowRight className="text-gray-400 hover:text-gray-200 transition" size={20} />
                         </div>
                     ))}
                 </div>
-                <div className="text-start">
-                    <button className="px-6 py-2 text-sm font-medium text-white bg-stone-900 rounded-full hover:bg-gray-700 transition">
+
+                {/* Button */}
+                <div className="text-start mt-8">
+                    <button className="px-6 py-2 text-sm font-medium text-white bg-stone-900 border border-white rounded-full hover:bg-gray-700 transition">
                         See All
                     </button>
                 </div>

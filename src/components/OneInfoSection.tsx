@@ -5,7 +5,7 @@ import Link from 'next/link'
 const InfoSection = () => {
     return (
         <section className="bg-[#f67d45] py-20 px-6">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-6xl mx-auto"> {/* Değiştirildi */}
                 {/* Heading */}
                 <div className="mb-6">
                     <span className="block text-6xl text-gray-700 font-medium mb-2">01</span>
