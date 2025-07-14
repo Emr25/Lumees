@@ -1,6 +1,6 @@
 'use client'
-
 import Image from 'next/image'
+import RotatingShape from './RotatingShape'
 
 const Hero = () => {
     return (
@@ -19,7 +19,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black/60 z-10" />
 
             {/* Content */}
-            <div className="relative z-20 w-full px-6">
+            <div className="relative z-20 w-full px-6 pt-32 md:pt-40">
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-white items-center">
                     {/* Left Side */}
                     <div className="flex flex-col justify-center text-center md:text-left">

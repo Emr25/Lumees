@@ -61,7 +61,7 @@ const ModelLibrarySection = () => {
                 {/* Section Header */}
                 <div className="mb-12">
                     <span className="block text-6xl text-gray-700 font-semibold mb-2">01</span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-700 border-b border-gray-300 pb-2 w-fit">
+                    <h2 className="text-xl md:text-xl font-bold text-gray-700 border-b border-gray-300 pb-2 w-fit">
                         Our Model Library
                     </h2>
                 </div>

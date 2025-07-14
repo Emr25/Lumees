@@ -34,7 +34,7 @@ const ControlSection = () => {
                 {/* Section Header */}
                 <div className="mb-12">
                     <span className="block text-6xl text-gray-700 font-medium mb-2">03</span>
-                    <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 border-b-2 border-gray-500 inline-block pb-1">
+                    <h2 className="text-lg md:text-lg font-semibold text-gray-900 border-b-2 border-gray-500 inline-block pb-1">
                         Built for Impact, Designed for Control
                     </h2>
                 </div>

@@ -29,7 +29,7 @@ const ContactSection = () => {
                 {/* Section Header */}
                 <div className="mb-12">
                     <span className="block text-6xl font-medium mb-2">06</span>
-                    <h2 className="text-3xl md:text-4xl font-semibold border-b-2 border-white inline-block pb-1">
+                    <h2 className="text-xl md:text-xl font-semibold border-b-2 border-white inline-block pb-1">
                         Contact Us
                     </h2>
                     <p className='font-thin text-3xl text-black text-center'>

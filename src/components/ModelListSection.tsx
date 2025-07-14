@@ -24,7 +24,7 @@ const ModelListSection = () => {
                 {/* Section Header */}
                 <div className="mb-12">
                     <span className="block text-6xl text-white font-medium mb-2">04</span>
-                    <h2 className="text-3xl md:text-4xl font-semibold text-white border-b-2 border-gray-400 inline-block pb-1">
+                    <h2 className="text-xl md:text-xl font-semibold text-white border-b-2 border-gray-400 inline-block pb-1">
                         Latest AI Models
                     </h2>
                 </div>

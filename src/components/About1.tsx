@@ -9,7 +9,7 @@ const AboutMultimodalSection = () => {
                 {/* Section Header */}
                 <div className="mb-12">
                     <span className="block text-6xl text-gray-700 font-medium mb-2">01</span>
-                    <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 border-b-2 border-gray-400 inline-block pb-1">
+                    <h2 className="text-xl md:text-xl font-semibold text-gray-900 border-b-2 border-gray-400 inline-block pb-1">
                         Building the Future of Multimodal Intelligence
                     </h2>
                 </div>

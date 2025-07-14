@@ -9,7 +9,7 @@ const ResearchSection = () => {
                 {/* Section Header */}
                 <div className="mb-12">
                     <span className="block text-6xl text-gray-700 font-medium mb-2">05</span>
-                    <h2 className="text-3xl md:text-4xl font-semibold text-gray-700 border-b-2 border-gray-400 inline-block pb-1">
+                    <h2 className="text-xl md:text-xl font-semibold text-gray-700 border-b-2 border-gray-400 inline-block pb-1">
                         Research
                     </h2>
                 </div>

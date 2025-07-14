@@ -28,7 +28,7 @@ const OfferSection = () => {
                 {/* Section Header */}
                 <div className="mb-12">
                     <span className="block text-6xl text-gray-700 font-medium mb-2">02</span>
-                    <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+                    <h2 className="text-lg md:text-lg font-semibold text-gray-900 border-b-2 border-black w-fit pb-1">
                         What we Offer
                     </h2>
                 </div>
