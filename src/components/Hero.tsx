@@ -1,6 +1,5 @@
 'use client'
 import Image from 'next/image'
-import RotatingShape from './RotatingShape'
 
 const Hero = () => {
     return (
